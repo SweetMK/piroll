@@ -1,53 +1,105 @@
+:root {
+    --theme-color:#10c9c3;
+    --dark-color: #222;
+    --light-color: #fff;
+    --mid-color: #777;
+
+}
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-    margin: 0;
-    height: 100vh;
-
+  margin: 0;
+  height: 100vh;
 }
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+button {
+    border: none;
+    outline: none;
+    background: none;
 }
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .container {
-    margin: 0 auto;
-    width: 90%;
-    height: 100%;
-    max-width: 1600px;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  max-width: 1600px;
 }
 .menu {
-    height: 72px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .logo {
-    height: 2em;
+  height: 2em;
 }
 .logo img {
-    height: 100%;
+  height: 100%;
 }
 .header_wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 .navlist {
-    display: flex;
-    gap: 2em;
-    font-family: "Montserrat",sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 800;
-
+  display: flex;
+  gap: 2em;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--dark-color);
+}
+.hero {
+  background: url("../img/main.webp") no-repeat center top / cover;
+  height: 100vh;
+  max-height: 768px;
+  font-family: "Montserrat", sans-serif;
+}
+.hero_wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100%;
+}
+.hero_content {
+  width: 40%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+}
+.hero_heading {
+color: var(--dark-color);
+font-size: 36px;
+font-weight: 600;
+margin: 0;
+}
+.hero_text {
+color: var(--mid-color);
+line-height: 1.6;
+font-size: 16px;
+margin: 0;
+}
+.hero_button {
+background: var(--theme-color);
+color: var(--light-color);
+padding: 1em 3em;
+font-size: 14px;
+text-transform: uppercase;
+font-family: inherit;
+letter-spacing: 1px;
 }
