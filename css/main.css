@@ -3,6 +3,11 @@
     --dark-color: #222;
     --light-color: #fff;
     --mid-color: #777;
+    --ff-main:  "Montserrat", sans-serif;
+    --ff-secondary:"Nunito", sans-serif;
+    --fz-text: 16px;
+    --fz-button: 14px;
+    --fz-heading: 32px;
 
 }
 *,
@@ -56,7 +61,7 @@ ul {
 .navlist {
   display: flex;
   gap: 2em;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--ff-main);
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 800;
@@ -66,7 +71,7 @@ ul {
   background: url("../img/main.webp") no-repeat center top / cover;
   height: 100vh;
   max-height: 768px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--ff-main);
 }
 .hero_wrapper {
   display: flex;
@@ -91,15 +96,81 @@ margin: 0;
 .hero_text {
 color: var(--mid-color);
 line-height: 1.6;
-font-size: 16px;
+font-size: var(--fz-text);
 margin: 0;
 }
 .hero_button {
 background: var(--theme-color);
 color: var(--light-color);
 padding: 1em 3em;
-font-size: 14px;
+font-size: var(--fz-button);
 text-transform: uppercase;
 font-family: inherit;
 letter-spacing: 1px;
+}
+.about {
+padding: 100px;
+}
+.about_wrapper{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+}
+.about_heading{
+font-size: var(--fz-heading);
+font-family: var(--ff-main);
+color: var(--dark-color);
+margin: 0;
+}
+.about_text{
+font-size: var(--fz-text);
+font-family: var(--ff-secondary);
+color: var(--mid-color);
+line-height: 1.6;
+margin: 0;
+text-align: center;
+min-width: 300px;
+max-width: 920px;
+width: 50%;
+}
+.about_sign{
+width: 200px;
+}
+.about_sign img {
+  width: 100%;
+}
+.skills{
+  background: url("../img/conv.webp") no-repeat center top / cover;
+  padding: 120px;
+}
+.skills_wrapper{
+
+}
+.skills_content{
+
+}
+.skills_heading{
+
+}
+.skills_skillbox{
+
+}
+.skills_text{
+
+}
+.skills_skill{
+
+}
+.skill_percent{
+
+}
+.skills_progressbar{
+
+}
+.skills_total{
+
+}
+.skills_value{
+
 }
