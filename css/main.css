@@ -5,6 +5,7 @@
   --semi-dark-color: #777;
   --semi-light-color: #ddd;
   --mid-color: #555;
+  --dark-color-alpha:#222e;
   --ff-main: "Montserrat", sans-serif;
   --ff-secondary: "Nunito", sans-serif;
   --ff-icons: "Pe";
@@ -36,7 +37,6 @@ textarea {
   outline: none;
   background: none;
 }
-
 ul {
   list-style: none;
   margin: 0;
@@ -47,6 +47,12 @@ ul {
   width: 90%;
   height: 100%;
   max-width: 1600px;
+}
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 .menu {
   height: 72px;
@@ -63,11 +69,63 @@ ul {
 .logo img {
   height: 100%;
 }
-.header_wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+.burger {
+  height: 24px;
+  aspect-ratio: 4 / 3;
+  position: absolute;
+  right: 0;
+  transform: translate(-50%);
+  display: none;
+  
+}
+.line {
+  background: var(--dark-color);
+  height: 3px;
+  width: 100%;
+  position: absolute;
+
+}
+.top {
+  top: 0;
+  left: 0;
+}
+.middle {
+  top: 50%;
+  translate: 0 -50%;
+}
+.bottom {
+  bottom: 0;
+  left: 0;
+}
+#check:checked~.navbar {
+display: block;
+}
+#check:checked~.burger {
+  position: fixed;
+  z-index: 99999;
+  right: 0;
+  top: 36px;
+  transform: translate(-50% , -50%);
+
+}
+#check:checked~.burger .line {
+background: var(--light-color);
+}
+#check:checked~.burger .middle {
+display: none;
+}
+#check:checked~.burger .top {
+  top: 50%;
+  translate: 0 -50%;
+  rotate:45deg;
+}
+  #check:checked~.burger .bottom {
+    top: 50%;
+    translate: 0 -50%;
+    rotate:-45deg;
+}
+#check {
+  display: none;
 }
 .navlist {
   display: flex;
@@ -489,4 +547,35 @@ textarea {
 .footer_socials {
   display: grid;
   gap: 0.5em;
+}
+@media screen and (min-width:320px) and (max-width:567px) {
+  .burger {
+    display: block;
+  }
+  .logo {
+    position: absolute;
+    left: 0;
+    transform: translate(50%);
+  }
+  .navbar {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark-color-alpha);
+  }
+.navlist {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 80px;
+}
+.item {
+color: var(--light-color);
+font-size: var(--fz-text-m);
+}
 }
